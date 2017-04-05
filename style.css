@@ -1,0 +1,74 @@
+
+
+.container { 
+	position: relative; 
+	width: 960px; 
+	margin: 0 auto; 
+	transition: all 1s ease;	
+}
+
+.cat_container{
+	margin: 1%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.block_container{
+	display: block;
+	float:left;
+	box-sizing: border-box;
+	overflow:hidden;
+}
+
+.block_wrapper{
+	overflow:hidden;
+	position: relative !important;
+	cursor:pointer;
+}
+
+.block_container img{	
+	max-width: 100%;
+	position: relative;
+	transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.cat_item{
+	display: block;
+	float: left;
+	padding: 5px 20px;
+	text-align: center;
+	cursor: pointer;	
+}
+
+.cat_item:hover{
+	background-color: orange;
+	color: white;
+}
+
+.cat_container li.active{
+	background: #e95a44; /*orange*/
+	color: white;
+}
+
+
+.animals, .food, .scenery{
+	box-sizing: border-box;
+	float: left;
+	padding: 2px;
+	width: 20%;	
+}
+
+.hide{
+	transform: scale(0);
+	width: 0;
+	padding: 0;	
+	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+	.container {
+		width: 768px; 
+	}
+}
