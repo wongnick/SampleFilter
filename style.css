@@ -1,69 +1,75 @@
 
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
 
 .container { 
-	position: relative; 
 	width: 960px; 
-	margin: 0 auto; 
+	margin: auto; 
 	transition: all 1s ease;	
 }
 
+/*Tabs*/
 .cat_container{
-	margin: 1%;
+	margin: 0%;
 	padding: 0;
 	overflow: hidden;
 }
 
-.block_container{
-	display: block;
-	float:left;
-	box-sizing: border-box;
-	overflow:hidden;
-}
-
-.block_wrapper{
-	overflow:hidden;
-	position: relative !important;
-	cursor:pointer;
-}
-
-.block_container img{	
-	max-width: 100%;
-	position: relative;
-	transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.cat_item{
-	display: block;
-	float: left;
+.cat_container li{	
+	display: inline-block;
 	padding: 5px 20px;
 	text-align: center;
 	cursor: pointer;	
 }
 
-.cat_item:hover{
+.cat_container li:hover{
 	background-color: orange;
 	color: white;
 }
 
 .cat_container li.active{
-	background: #e95a44; /*orange*/
+	background: #e95a44; 
 	color: white;
 }
 
-
-.animals, .food, .scenery{
-	box-sizing: border-box;
-	float: left;
-	padding: 2px;
-	width: 20%;	
+.cat_container .toggle:hover{
+	background-color: blue;
+}
+.cat_container .toggle.active{
+	background-color: green;
 }
 
-.hide{
+
+/*Images*/
+ul li img{
+	box-sizing: border-box;
+	padding: 2px;
+	width: 20%;
+	
+}
+
+ul.block_container img{	
+	transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	
+}
+
+.hidden{
 	transform: scale(0);
 	width: 0;
 	padding: 0;	
 	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 
+}
+
+ul li #grid{
+	float: left;
+}
+
+ul li #list{
+	display: block;
 }
 
 /* #Tablet (Portrait) */
@@ -72,3 +78,5 @@
 		width: 768px; 
 	}
 }
+
+
