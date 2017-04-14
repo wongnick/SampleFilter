@@ -34,14 +34,28 @@ $(document).ready(function(){
 
 	//Toggle between grid and list format
 	$('.toggle').bind("click", function(){
-		if($(this).attr('id') == "list"){
-			$('.toggle').removeClass("active");
-			$(this).addClass("active");
-			$(".block_container [id*='grid']").attr('id', 'list');
+		var curr = '.' + $('.cat_item.active').attr('id');
+		if(curr == ".all"){
+			curr = ".block_container img";
+	
+		}
+		$('.toggle').removeClass("active");
+		$(this).addClass("active");
+		$('.block_container img').addClass("hidden");
+
+		if($(this).attr('id') == "list"){				
+			setTimeout(function(){
+				$(curr).removeClass("hidden");
+				$(".block_container [id*='grid']").attr('id', 'list');
+			}, 300);
+			
+
 		}else{
-			$('.toggle').removeClass("active");
-			$(this).addClass("active");
-			$(".block_container [id*='list']").attr('id', 'grid');
+			setTimeout(function(){
+				$(curr).removeClass("hidden");
+				$(".block_container [id*='list']").attr('id', 'grid');
+			}, 300);
+			
 		}
 	});
 	
