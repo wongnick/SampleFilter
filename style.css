@@ -60,7 +60,7 @@ ul.block_container img{
 	transform: scale(0);
 	width: 0;
 	padding: 0;	
-	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 }
 
@@ -71,6 +71,9 @@ ul li #grid{
 ul li #list{
 	display: block;
 }
+
+
+
 
 /* #Tablet (Portrait) */
 @media only screen and (min-width: 768px) and (max-width: 960px) {
