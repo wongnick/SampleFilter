@@ -1,4 +1,6 @@
-
+body{
+	overflow-y: scroll;
+}
 ul {
 	list-style-type: none;
 	padding-left: 0px;
