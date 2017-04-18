@@ -1,4 +1,8 @@
 
+body{
+	overflow-y:scroll;
+}
+
 ul {
 	list-style-type: none;
 	padding-left: 0px;
@@ -8,7 +12,8 @@ ul {
 .container { 
 	width: 960px; 
 	margin: auto; 
-	transition: all 1s ease;	
+	transition: all 1s ease;
+
 }
 
 /*Tabs*/
@@ -64,11 +69,15 @@ ul.block_container img{
 
 }
 
-ul li #grid{
+#GRID{
+
+}
+
+ ul li .grid{
 	float: left;
 }
 
-ul li #list{
+ul li .list{
 	display: block;
 }
 

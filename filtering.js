@@ -34,26 +34,33 @@ $(document).ready(function(){
 
 	//Toggle between grid and list format
 	$('.toggle').bind("click", function(){
+		
+		// Find which category is currently active
 		var curr = '.' + $('.cat_item.active').attr('id');
 		if(curr == ".all"){
 			curr = ".block_container img";
-	
 		}
+
+		// Highlight the selected format
 		$('.toggle').removeClass("active");
 		$(this).addClass("active");
+
+		// Hide the elements before switching formats
 		$('.block_container img').addClass("hidden");
 
-		if($(this).attr('id') == "list"){				
+		if($(this).attr('id') == "LIST"){				
 			setTimeout(function(){
 				$(curr).removeClass("hidden");
-				$(".block_container [id*='grid']").attr('id', 'list');
+				$('.block_container img').removeClass("grid");
+				$('.block_container img').addClass("list");
 			}, 300);
 			
 
 		}else{
 			setTimeout(function(){
 				$(curr).removeClass("hidden");
-				$(".block_container [id*='list']").attr('id', 'grid');
+				$('.block_container img').removeClass("list");
+				$('.block_container img').addClass("grid");
 			}, 300);
 			
 		}
